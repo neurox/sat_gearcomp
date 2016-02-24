@@ -1,0 +1,1 @@
+<h1>Soy el header alternativo con banner</h1>
