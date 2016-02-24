@@ -6,8 +6,21 @@
 	$keywords = "gearcomp, reparacion de computadoras, laptops";
   $styles = "
     <link rel=\"stylesheet\" type=\"text/css\" href=\"css/forms.css\">
+    <link rel=\"stylesheet\" type=\"text/css\" href=\"css/jquery-ui.css\">
   ";
 	$header = "";
+  $scripts = "
+    <script type=\"text/javascript\" src=\"js/jquery-ui.js\"></script>
+
+    <script>
+    $(function() {
+      $( \"#cliente\" ).autocomplete({
+        source: 'components/autocomplete.php'
+      });
+    });
+    </script>
+
+  ";
 
 	require_once('components/mainFrameHead.php');
 
@@ -19,7 +32,9 @@
         <input type="text" class="form-control" name="marca" placeholder="Marca:" value="<?php if(!$registrado && isset($marca)) echo $marca ?>"></input>
         <input type="text" class="form-control" name="modelo" placeholder="Modelo:" value="<?php if(!$registrado && isset($modelo)) echo $modelo ?>"></input>
         <input type="text" class="form-control" name="no_serie" placeholder="No. de serie:" value="<?php if(!$registrado && isset($no_serie)) echo $no_serie ?>"></input>
-        <input type="text" class="form-control" name="cliente" placeholder="ID de cliente:" value="<?php if(!$registrado && isset($cliente)) echo $cliente ?>"></input>
+        <div class="ui-widget">
+          <input type="text" id="cliente" class="form-control" name="cliente" placeholder="ID de cliente:" value="<?php if(!$registrado && isset($cliente)) echo $cliente ?>"></input>
+        </div>
 
         <?php if(!empty($errores)): ?>
 

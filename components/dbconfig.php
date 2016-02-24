@@ -1,10 +1,15 @@
 <?php
 
+	$dbHost = 'localhost';
+	$dbUsername = 'root';
+	$dbPassword = 'toor';
+	$dbName = 'sat_gearcomp';
+
 	$con = mysqli_connect(
-		"localhost",
-		"root",
-		"toor",
-		"sat_gearcomp"
+		$dbHost,
+		$dbUsername,
+		$dbPassword,
+		$dbName
 	);
 
 	if(mysqli_connect_errno())
