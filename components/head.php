@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
+	<meta  http-equiv="conten-type" content="text/html; charset=UTF-8">
 	<meta name="description" content="<?=$description;?>">
 	<meta name="keywords" content="<?=$keywords;?>">
 	<meta name="author" content="Neurox Gómez">

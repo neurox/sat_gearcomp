@@ -7,6 +7,9 @@
   $styles = "
     <link rel=\"stylesheet\" type=\"text/css\" href=\"css/forms.css\">
   ";
+  $scripts = "
+    <script type=\"text/javascript\" src=\"js/verifica-cliente.js\"></script>
+  ";
 	$header = "";
 
 	require_once('components/mainFrameHead.php');
@@ -19,7 +22,9 @@
         <input type="text" class="form-control" name="marca" placeholder="Marca:" value="<?php if(!$registrado && isset($marca)) echo $marca ?>"></input>
         <input type="text" class="form-control" name="modelo" placeholder="Modelo:" value="<?php if(!$registrado && isset($modelo)) echo $modelo ?>"></input>
         <input type="text" class="form-control" name="no_serie" placeholder="No. de serie:" value="<?php if(!$registrado && isset($no_serie)) echo $no_serie ?>"></input>
-        <input type="text" class="form-control" name="cliente" placeholder="ID de cliente:" value="<?php if(!$registrado && isset($cliente)) echo $cliente ?>"></input>
+        <input type="text" id="cliente" class="form-control" name="cliente" placeholder="ID de cliente:" value="<?php if(!$registrado && isset($cliente)) echo $cliente ?>"></input>
+
+        <div id="info-cliente"></div>
 
         <?php if(!empty($errores)): ?>
 
