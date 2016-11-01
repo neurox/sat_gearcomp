@@ -3,7 +3,7 @@
 	$con = mysqli_connect(
 		"localhost",
 		"root",
-		"toor",
+		"",
 		"sat_gearcomp"
 	);
 
@@ -13,5 +13,3 @@
 	{
 		echo "Database error";
 	}
-	
-?>

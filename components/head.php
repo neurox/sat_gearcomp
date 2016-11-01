@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta  http-equiv="conten-type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
 	<meta name="description" content="<?=$description;?>">
 	<meta name="keywords" content="<?=$keywords;?>">
 	<meta name="author" content="Neurox Gómez">
@@ -12,4 +12,3 @@
 	<?php if(isset($styles))echo$styles; ?>
 </head>
 <body>
-
